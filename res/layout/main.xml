@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-    >
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
 
     <TextView
+        android:id="@+id/helloTextView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World, DnDPlaySheetAndroidMain"
-        />
-</LinearLayout>
+        android:layout_alignParentTop="true"
+        android:text="@string/hello" />
 
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/helloTextView"
+        android:hint="@string/name" />
+
+    <Button
+        android:id="@+id/setName"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameEditText"
+        android:layout_alignParentLeft="true"
+        android:text="@string/setName" />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameEditText"
+        android:layout_alignParentRight="true"
+        android:text="@string/clearName" />
+</RelativeLayout>
