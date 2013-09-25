@@ -24,7 +24,7 @@ public class DnDPlaySheetAndroidMain extends Activity {
 
             public void onClick(View v) {
 
-                setName.setText("You clicked me!");
+
 
             }
 

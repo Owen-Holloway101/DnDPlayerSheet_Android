@@ -1,0 +1,10 @@
+This is meerly a reference file, because I need this
+
+
+Icon Size:
+
+drawable-ldpi    (120 dpi, Low density screen)              - 36px x 36px    (25.00%)
+drawable-mdpi    (160 dpi, Medium density screen)           - 48px x 48px    (33.33%)
+drawable-hdpi    (240 dpi, High density screen)             - 72px x 72px    (50.00%)
+drawable-xhdpi   (320 dpi, Extra-high density screen)       - 96px x 96px    (66.67%)
+drawable-xxhdpi  (480 dpi, Extra-Extra-high density screen) - 144px x 144px (100.00%)
