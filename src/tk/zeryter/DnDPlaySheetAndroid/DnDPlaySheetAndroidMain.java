@@ -1,34 +1,41 @@
 package tk.zeryter.DnDPlaySheetAndroid;
 
 import android.app.Activity;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
 public class DnDPlaySheetAndroidMain extends Activity {
+
+    private SeekBar setAge;
+
+    private TextView setAgePrompt;
 
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.main);
-        /*
-        setName = (Button) findViewById(R.id.setName);
-        setName.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
 
-                name = String.valueOf(nameEditText.getText());
+        setAgePrompt = (TextView) findViewById(R.id.setCharAgePrompt);
 
-                nameEditText.setBackgroundColor(Color.GREEN);
-                nameEditText.setFocusable(false);
+        setAge = (SeekBar) findViewById(R.id.setCharAge);
 
+        setAge.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                int currentProgress = seekBar.getProgress();
+                setAgePrompt.setText("Age: " + (currentProgress + 10) );
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
             }
         });
-        */
-    }
 
-    public void onStart() {
     }
 }

@@ -5,4 +5,7 @@
     <string name="hello">Hello!</string>
     <string name="setPlayerNameHint">Player Name</string>
     <string name="setCharNameHint">Character Name</string>
+
+    <string name="setCharAgePrompt">Age: 10</string>
+
 </resources>
