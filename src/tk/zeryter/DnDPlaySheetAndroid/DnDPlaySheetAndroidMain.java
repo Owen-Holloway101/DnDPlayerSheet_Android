@@ -15,7 +15,7 @@ public class DnDPlaySheetAndroidMain extends Activity {
 
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.main);
+        setContentView(R.layout.basicDetails);
 
         setAgePrompt = (TextView) findViewById(R.id.setCharAgePrompt);
 

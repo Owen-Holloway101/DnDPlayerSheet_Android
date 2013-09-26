@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- ZeryTheme is just holo light atm because boring Owen is boring -->
-    <style name="Theme.ZeryTheme" parent="@android:style/Theme.Holo.Light" />
+    <style name="Theme.ZeryTheme" parent="@android:style/Theme.Holo" />
 </resources>
