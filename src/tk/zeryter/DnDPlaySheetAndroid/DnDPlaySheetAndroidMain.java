@@ -2,40 +2,21 @@ package tk.zeryter.DnDPlaySheetAndroid;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.widget.SeekBar;
-import android.widget.TextView;
 
 public class DnDPlaySheetAndroidMain extends Activity {
 
-    private SeekBar setAge;
+    //Set the activity for use calling other classes
+    private Activity activity = this;
 
-    private TextView setAgePrompt;
+
 
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.basicDetails);
+        Variables.basicDetailsView.init(activity);
 
-        setAgePrompt = (TextView) findViewById(R.id.setCharAgePrompt);
 
-        setAge = (SeekBar) findViewById(R.id.setCharAge);
-
-        setAge.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                int currentProgress = seekBar.getProgress();
-                setAgePrompt.setText("Age: " + (currentProgress + 10) );
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-            }
-        });
 
     }
 }
