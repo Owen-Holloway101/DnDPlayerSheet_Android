@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
+    <!--
 
     <TextView
         android:id="@+id/helloTextView"
@@ -12,24 +13,33 @@
         android:layout_alignParentTop="true"
         android:text="@string/hello" />
 
-    <EditText
-        android:id="@+id/nameEditText"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/helloTextView"
-        android:hint="@string/name" />
+    -->
 
-    <Button
-        android:id="@+id/setName"
-        android:layout_width="150dp"
+    <EditText
+        android:id="@+id/setPlayerName"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/nameEditText"
-        android:layout_alignParentLeft="true"
-        android:text="@string/setName" />
-    <Button
-        android:layout_width="150dp"
+        android:hint="@string/setPlayerNameHint" />
+
+    <EditText
+        android:id="@+id/setCharName"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/nameEditText"
-        android:layout_alignParentRight="true"
-        android:text="@string/clearName" />
+        android:layout_below="@id/setPlayerName"
+        android:hint="@string/setCharNameHint" />
+
+    <SeekBar
+        android:id="@+id/setCharAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setCharName"/>
+
+    <Switch
+        android:id="@+id/setGender"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setCharAge"
+        android:textOn="Male"
+        android:textOff="Female"/>
 </RelativeLayout>

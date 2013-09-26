@@ -3,7 +3,6 @@
     <string name="app_name">[PlayerSheet]</string>
 
     <string name="hello">Hello!</string>
-    <string name="name">name</string>
-    <string name="setName">Set Name</string>
-    <string name="clearName">Clear Name</string>
+    <string name="setPlayerNameHint">Player Name</string>
+    <string name="setCharNameHint">Character Name</string>
 </resources>
