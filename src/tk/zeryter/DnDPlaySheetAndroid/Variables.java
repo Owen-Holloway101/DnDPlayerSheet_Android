@@ -11,6 +11,9 @@ public class Variables {
     public static int charAge;
     public static Race race;
 
+    //ActionBar stuff
+    public static Tabs tabs = new Tabs();
+
     //View classes
     public static BasicDetailsView basicDetailsView = new BasicDetailsView();
 
