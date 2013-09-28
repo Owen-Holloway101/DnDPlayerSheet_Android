@@ -13,6 +13,14 @@ public class Variables {
     public static int charAge;
     public static Race race;
 
+    //Ability scores
+    public static int STR;
+    public static int CON;
+    public static int DEX;
+    public static int INT;
+    public static int WIS;
+    public static int CHA;
+
     //Fragments
     public static Fragment basicDetailsFragment = new BasicDetailsViewFragment();
     public static Fragment raceFragment = new RaceFragment();

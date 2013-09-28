@@ -47,22 +47,24 @@ public class DnDPlaySheetAndroidMain extends Activity implements ActionBar.TabLi
 
         fragmentTransaction.add(R.id.viewSwitcher, Variables.basicDetailsFragment);
         fragmentTransaction.add(R.id.viewSwitcher, Variables.raceFragment);
-//        fragmentTransaction.commit();
+
+        fragmentTransaction.show(Variables.basicDetailsFragment);
+        fragmentTransaction.show(Variables.raceFragment);
+        fragmentTransaction.hide(Variables.raceFragment);
 
     }
 
     public void switchToFragment(Fragment fragment) {
 
         fragmentTransaction = fragmentManager.beginTransaction();
-
         fragmentTransaction.show(fragment);
         fragmentTransaction.commit();
         Log.d("DnDPlayerSheet","fragment show");
     }
 
     public void switchFromFragment(Fragment fragment) {
-        fragmentTransaction = fragmentManager.beginTransaction();
 
+        fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.hide(fragment);
         fragmentTransaction.commit();
         Log.d("DnDPlayerSheet","fragment hide");
