@@ -1,15 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-
-    <Button
-        android:id="@+id/testButton"
+    <EditText
+        android:id="@+id/setPlayerName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Test Button"/>
+        android:hint="@string/setPlayerNameHint" />
 
-</LinearLayout>
+    <EditText
+        android:id="@+id/setCharName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setPlayerName"
+        android:hint="@string/setCharNameHint"/>
+
+    <SeekBar
+        android:id="@+id/setCharAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setCharName"
+        android:paddingRight="20dp"
+        android:paddingLeft="100dp"/>
+
+    <TextView
+        android:id="@+id/setCharAgePrompt"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setCharName"
+        android:textSize="18sp"
+        android:text="@string/setCharAgePrompt"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/setGenderPrompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setCharAge"/>
+
+    <Switch
+        android:id="@+id/setGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setCharAge"
+        android:textOn="Female"
+        android:textOff="Male"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>
