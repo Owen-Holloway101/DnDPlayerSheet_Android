@@ -1,10 +1,7 @@
 package tk.zeryter.DnDPlaySheetAndroid;
 
-import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentTransaction;
+import android.app.*;
 import android.os.Bundle;
-import android.app.ActionBar;
 import tk.zeryter.DnDPlaySheetAndroid.fragments.BasicDetailsViewFragment;
 
 public class DnDPlaySheetAndroidMain extends Activity {
@@ -21,6 +18,12 @@ public class DnDPlaySheetAndroidMain extends Activity {
         setContentView(R.layout.main);
 
         actionBar = getActionBar();
+
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        BasicDetailsViewFragment fragment = new BasicDetailsViewFragment();
+        fragmentTransaction.add(R.id.viewSwitcher,fragment);
+        fragmentTransaction.commit();
 
     }
 

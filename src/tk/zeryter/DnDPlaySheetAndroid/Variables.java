@@ -1,7 +1,7 @@
 package tk.zeryter.DnDPlaySheetAndroid;
 
 import tk.zeryter.DnDPlaySheetAndroid.types.Race;
-import tk.zeryter.DnDPlaySheetAndroid.views.BasicDetailsView;
+import tk.zeryter.DnDPlaySheetAndroid.views.BasicDetailsActivity;
 
 public class Variables {
 
@@ -11,10 +11,7 @@ public class Variables {
     public static int charAge;
     public static Race race;
 
-    //ActionBar stuff
-    public static Tabs tabs = new Tabs();
-
     //View classes
-    public static BasicDetailsView basicDetailsView = new BasicDetailsView();
+    public static BasicDetailsActivity basicDetailsActivity= new BasicDetailsActivity();
 
 }

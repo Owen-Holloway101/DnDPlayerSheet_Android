@@ -6,7 +6,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import tk.zeryter.DnDPlaySheetAndroid.R;
 
-public class BasicDetailsView extends Activity {
+public class BasicDetailsActivity extends Activity {
 
 
 
