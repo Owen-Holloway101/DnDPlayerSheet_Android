@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">[PlayerSheet]</string>
+    <string name="setPlayerNameHint">Player Name</string>
+    <string name="setCharNameHint">Character Name</string>
 
-    <!--Fragment layout strings-->
+    <string name="setCharAgePrompt">Age: 10</string>
 
     <!--basic details-->
     <string name="playerNameHint">Player Name</string>
