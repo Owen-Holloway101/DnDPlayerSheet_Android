@@ -3,6 +3,7 @@ package tk.zeryter.DnDPlaySheetAndroid;
 import android.app.*;
 import android.os.Bundle;
 import tk.zeryter.DnDPlaySheetAndroid.fragments.BasicDetailsViewFragment;
+import tk.zeryter.DnDPlaySheetAndroid.fragments.RaceFragment;
 
 public class DnDPlaySheetAndroidMain extends Activity {
 
@@ -21,7 +22,9 @@ public class DnDPlaySheetAndroidMain extends Activity {
 
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
         BasicDetailsViewFragment fragment = new BasicDetailsViewFragment();
+
         fragmentTransaction.add(R.id.viewSwitcher,fragment);
         fragmentTransaction.commit();
 

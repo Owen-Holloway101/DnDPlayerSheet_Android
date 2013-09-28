@@ -2,10 +2,19 @@
 <resources>
     <string name="app_name">[PlayerSheet]</string>
 
-    <string name="hello">Hello!</string>
     <string name="setPlayerNameHint">Player Name</string>
     <string name="setCharNameHint">Character Name</string>
 
     <string name="setCharAgePrompt">Age: 10</string>
+
+    <string-array name="races">
+        <item>Human</item>
+        <item>Elf</item>
+        <item>Dwarf</item>
+        <item>Ork</item>
+        <item>Goblin</item>
+        <item>High-Elf</item>
+        <item>Wood-Elf</item>
+    </string-array>
 
 </resources>
