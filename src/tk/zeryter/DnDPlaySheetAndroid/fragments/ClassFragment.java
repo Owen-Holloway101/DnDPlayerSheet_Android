@@ -10,15 +10,21 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import tk.zeryter.DnDPlaySheetAndroid.R;
 
-public class RaceFragment extends Fragment implements AdapterView.OnItemSelectedListener {
+/**
+ * Owen Holloway
+ * ZerytSoft
+ * Date: 25/11/13
+ */
+
+public class ClassFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.classfragment, container, false);
+        return inflater.inflate(R.layout.racefragment, container, false);
     }
 
-    Spinner classPicker;
+    Spinner racePicker;
 
     ArrayAdapter<CharSequence> adapter;
 
@@ -26,13 +32,13 @@ public class RaceFragment extends Fragment implements AdapterView.OnItemSelected
 
         super.onStart();
 
-        classPicker = (Spinner) getView().findViewById(R.id.classPicker);
+        racePicker = (Spinner) getView().findViewById(R.id.racePicker);
 
 
         adapter = ArrayAdapter.createFromResource(getActivity().getBaseContext(), R.array.races, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        classPicker.setAdapter(adapter);
-        classPicker.setOnItemSelectedListener(this);
+        racePicker.setAdapter(adapter);
+        racePicker.setOnItemSelectedListener(this);
 
     }
 
@@ -44,5 +50,3 @@ public class RaceFragment extends Fragment implements AdapterView.OnItemSelected
     public void onNothingSelected(AdapterView<?> parent) {
     }
 }
-
-

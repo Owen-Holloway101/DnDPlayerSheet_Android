@@ -13,7 +13,7 @@ public class DnDPlaySheetAndroidMain extends Activity implements ActionBar.TabLi
     //Set the activity for use calling other classes
     private Activity activity = this;
     private ActionBar actionBar;
-    private ActionBar.Tab basicDetailsTab, raceTab;
+    private ActionBar.Tab basicDetailsTab, raceTab, classTab;
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
 
@@ -35,22 +35,25 @@ public class DnDPlaySheetAndroidMain extends Activity implements ActionBar.TabLi
 
         basicDetailsTab = actionBar.newTab();
         raceTab = actionBar.newTab();
+        classTab = actionBar.newTab();
 
         basicDetailsTab.setTabListener(this);
         raceTab.setTabListener(this);
+        classTab.setTabListener(this);
 
         basicDetailsTab.setText("Details");
         raceTab.setText("Race");
+        classTab.setText("Class");
 
         actionBar.addTab(basicDetailsTab);
         actionBar.addTab(raceTab);
+        actionBar.addTab(classTab);
 
         fragmentTransaction.add(R.id.viewSwitcher, Variables.basicDetailsFragment);
         fragmentTransaction.add(R.id.viewSwitcher, Variables.raceFragment);
+        fragmentTransaction.add(R.id.classPicker, Variables.classFragment);
 
         fragmentTransaction.show(Variables.basicDetailsFragment);
-        fragmentTransaction.show(Variables.raceFragment);
-        fragmentTransaction.hide(Variables.raceFragment);
 
     }
 
@@ -86,6 +89,11 @@ public class DnDPlaySheetAndroidMain extends Activity implements ActionBar.TabLi
             switchToFragment(Variables.raceFragment);
         }
 
+        if (tab == classTab) {
+            Log.d("DnDPlayerSheet","classTab selected");
+            //fragmentTransaction.add(R.id.viewSwitcher,Variables.raceFragment);
+            switchToFragment(Variables.classFragment);
+        }
     }
 
     @Override
@@ -103,6 +111,13 @@ public class DnDPlaySheetAndroidMain extends Activity implements ActionBar.TabLi
             //fragmentTransaction.hide(Variables.raceFragment);
             //fragmentTransaction.remove(Variables.raceFragment);
             switchFromFragment(Variables.raceFragment);
+        }
+
+        if (tab == classTab) {
+            Log.d("DnDPlayerSheet","classTab Unselected");
+            //fragmentTransaction.hide(Variables.raceFragment);
+            //fragmentTransaction.remove(Variables.raceFragment);
+            switchFromFragment(Variables.classFragment);
         }
     }
 
