@@ -14,7 +14,7 @@ public class PlaySheetMain extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);    //To change body of overridden methods use File | Settings | File Templates.
+        super.onCreate(savedInstanceState);
 
         setContentView(R.layout.main);
     }
@@ -23,7 +23,7 @@ public class PlaySheetMain extends Activity {
     private ActionBar actionBar;
 
     //Fragments
-    BasicDetailsFragment basicDetailsFragment = new BasicDetailsFragment();
+    private static BasicDetailsFragment basicDetailsFragment = new BasicDetailsFragment();
 
     @Override
     protected void onStart() {
@@ -33,5 +33,13 @@ public class PlaySheetMain extends Activity {
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
 
         getFragmentManager().beginTransaction().add(R.id.viewSwitcher, basicDetailsFragment).commit();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        getFragmentManager().beginTransaction().remove(basicDetailsFragment).commit();
+
     }
 }

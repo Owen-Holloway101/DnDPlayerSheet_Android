@@ -53,6 +53,5 @@ public class BasicDetailsFragment extends Fragment {
             }
         });
     }
-
 }
 
