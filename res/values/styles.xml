@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- ZeryTheme is just holo light atm because boring Owen is boring -->
-    <style name="Theme.ZeryTheme" parent="@android:style/Theme.Holo.Light" />
+
+    <!--Colours, custom colours!-->
+    <color name="backgroundGrey">#2E3436</color>
+    <color name="statusBar">#ff30c033</color>
+
+    <!---->
+    <style name="Theme.ZeryTheme" parent="@android:style/Theme.Holo" >
+        <item name="android:windowBackground">@color/backgroundGrey</item>
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar" parent="android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/statusBar</item>
+    </style>
+
 </resources>

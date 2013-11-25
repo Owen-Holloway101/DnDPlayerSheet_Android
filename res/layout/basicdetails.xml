@@ -18,11 +18,19 @@
             android:layout_below="@id/playerName"
             android:hint="@string/charNameHint"/>
 
+    <!--TODO add prompt-->
+    <EditText
+        android:id="@+id/charAlign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/charName"
+        android:hint="TODO add prompt" />
+
     <SeekBar
             android:id="@+id/charAge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/charName"
+            android:layout_below="@id/charAlign"
             android:paddingRight="20dp"
             android:paddingLeft="100dp"/>
 
@@ -30,7 +38,7 @@
             android:id="@+id/agePrompt"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/charName"
+            android:layout_below="@id/charAlign"
             android:textSize="18sp"
             android:text="@string/charAgePrompt"
             android:layout_marginTop="3dp"

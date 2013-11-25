@@ -34,9 +34,4 @@ public class PlaySheetMain extends Activity {
 
         getFragmentManager().beginTransaction().add(R.id.viewSwitcher, basicDetailsFragment).commit();
     }
-
-    @Override
-    protected void onResume() {
-        super.onResume();    //To change body of overridden methods use File | Settings | File Templates.
-    }
 }
