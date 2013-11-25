@@ -2,30 +2,10 @@
 <resources>
     <string name="app_name">[PlayerSheet]</string>
 
-    <string name="setPlayerNameHint">Player Name</string>
-    <string name="setCharNameHint">Character Name</string>
+    <!--Fragment layout strings-->
 
-    <string name="setCharAgePrompt">Age: 10</string>
-
-    <string-array name="races">
-        <item>Human</item>
-        <item>Elf</item>
-        <item>Dwarf</item>
-        <item>Orc</item>
-        <item>Goblin</item>
-        <item>High-Elf</item>
-        <item>Wood-Elf</item>
-        <item>[PLACEHOLDER]</item>
-        <item>[PLACEHOLDER]</item>
-        <item>[PLACEHOLDER]</item>
-        <item>[PLACEHOLDER]</item>
-        <item>[PLACEHOLDER]</item>
-        <item>[PLACEHOLDER]</item>
-        <item>[PLACEHOLDER]</item>
-        <item>[PLACEHOLDER]</item>
-        <item>[PLACEHOLDER]</item>
-        <item>[PLACEHOLDER]</item>
-        <item>[PLACEHOLDER]</item>
-    </string-array>
-
+    <!--basic details-->
+    <string name="playerNameHint">Player Name</string>
+    <string name="charNameHint">Character Name</string>
+    <string name="charAgePrompt">Age: 10</string>
 </resources>
