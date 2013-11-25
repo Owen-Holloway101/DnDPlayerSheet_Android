@@ -3,7 +3,7 @@
 
     <!--Colours, custom colours!-->
     <color name="backgroundGrey">#2E3436</color>
-    <color name="statusBar">#ff30c033</color>
+    <color name="statusBar">#6AD421</color>
 
     <!---->
     <style name="Theme.ZeryTheme" parent="@android:style/Theme.Holo" >
