@@ -10,4 +10,7 @@
     <string name="playerNameHint">Player Name</string>
     <string name="charNameHint">Character Name</string>
     <string name="charAgePrompt">Age: 10</string>
+
+    <!--start menu-->
+    <string name="newCharButton">New Character</string>
 </resources>

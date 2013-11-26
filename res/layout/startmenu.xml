@@ -11,15 +11,16 @@
             android:text="Street"
             android:layout_gravity="left">
         <Button
-            android:id="@+id/testButton1"
+            android:id="@+id/newCharButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="testButton1"/>
+            android:text="@string/newCharButton"
+            android:drawableTop="@drawable/custom_add"/>
         <Button
                 android:id="@+id/testButton3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/testButton1"
+                android:layout_below="@id/newCharButton"
                 android:text="testButton3"/>
             </RelativeLayout>
 
