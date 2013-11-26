@@ -14,23 +14,29 @@ import tk.zeryter.PlaySheetAndroid.fragments.StartMenuFragment;
 
 public class PlaySheetMain extends Activity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-        basicDetailsFragment.setMainActivity(this);
-        startMenuFragment.setMainActivity(this);
-
-    }
-
-    //ActionBar and Tabs
-    private ActionBar actionBar;
-
     //Fragments + manager
     private FragmentManager fragmentManager = new FragmentManager(this);
     public static BasicDetailsFragment basicDetailsFragment = new BasicDetailsFragment();
     public static StartMenuFragment startMenuFragment = new StartMenuFragment();
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+
+        //this is the start activity, these fragments need to know this
+        basicDetailsFragment.setMainActivity(this);
+        startMenuFragment.setMainActivity(this);
+
+        //the fragment manager needs to know what fragments it managing, as well as its container
+        fragmentManager.setContainer(R.id.viewSwitcher);
+        fragmentManager.addFragment("basicDetails",basicDetailsFragment);
+        fragmentManager.addFragment("startMenu",startMenuFragment);
+
+    }
+
+    //ActionBar and Tabs
+    private ActionBar actionBar;
 
     @Override
     protected void onStart() {
@@ -39,14 +45,22 @@ public class PlaySheetMain extends Activity {
         actionBar = getActionBar();
         //actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
 
-        getFragmentManager().beginTransaction().add(R.id.viewSwitcher, startMenuFragment).commit();
+        //the startmenu is started first ... obviously
+        fragmentManager.firstFragment("startMenu");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
 
-        getFragmentManager().beginTransaction().remove(startMenuFragment).commit();
+        fragmentManager.pause();
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        fragmentManager.resume();
     }
 }
