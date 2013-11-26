@@ -27,7 +27,7 @@ public class StartMenuFragment extends Fragment implements View.OnClickListener{
     }
 
     //GUI elements
-    Button newCharButton, openCharButton, testButton3;
+    Button newCharButton, openCharButton, openResourceButton;
 
     @Override
     public void onStart() {
@@ -35,7 +35,7 @@ public class StartMenuFragment extends Fragment implements View.OnClickListener{
 
         newCharButton = (Button) getView().findViewById(R.id.newCharButton);
         openCharButton = (Button) getView().findViewById(R.id.openCharButton);
-        testButton3 = (Button) getView().findViewById(R.id.testButton3);
+        openResourceButton = (Button) getView().findViewById(R.id.openResourceButton);
         newCharButton.setOnClickListener(this);
 
     }

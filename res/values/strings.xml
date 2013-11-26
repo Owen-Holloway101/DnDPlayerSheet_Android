@@ -14,4 +14,5 @@
     <!--start menu-->
     <string name="newCharButton">New Character</string>
     <string name="openCharButton">Old Character</string>
+    <string name="openResourceButton">Resource Package</string>
 </resources>

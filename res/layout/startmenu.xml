@@ -17,11 +17,12 @@
             android:text="@string/newCharButton"
             android:drawableTop="@drawable/custom_add"/>
         <Button
-                android:id="@+id/testButton3"
+                android:id="@+id/openResourceButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/newCharButton"
-                android:text="testButton3"/>
+                android:text="@string/openResourceButton"
+                android:drawableTop="@drawable/custom_resource"/>
             </RelativeLayout>
 
     <RelativeLayout

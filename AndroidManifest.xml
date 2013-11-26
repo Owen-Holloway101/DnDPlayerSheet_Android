@@ -28,7 +28,8 @@
             android:label="@string/app_name"
             android:theme="@style/Theme.ZeryTheme"
             android:parentActivityName=".PlaySheetMain">
-            <!-- Parent activity meta-data to support API level 7+ -->
+            <!-- Parent activity meta-data to support API level 7+; this requires libraries that are not being used
+            therefore API 16+ (android 4.1) is required-->
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".PlaySheetMain" />
