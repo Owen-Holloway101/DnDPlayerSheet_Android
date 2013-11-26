@@ -26,7 +26,8 @@ public class PlaySheetMain extends Activity {
     //ActionBar and Tabs
     private ActionBar actionBar;
 
-    //Fragments
+    //Fragments + manager
+    private FragmentManager fragmentManager = new FragmentManager(this);
     public static BasicDetailsFragment basicDetailsFragment = new BasicDetailsFragment();
     public static StartMenuFragment startMenuFragment = new StartMenuFragment();
 
