@@ -3,6 +3,8 @@ package tk.zeryter.PlaySheetAndroid;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
+import tk.zeryter.PlaySheetAndroid.fragments.BasicDetailsFragment;
+import tk.zeryter.PlaySheetAndroid.fragments.StartMenuFragment;
 
 /**
  * Owen Holloway
@@ -15,8 +17,9 @@ public class PlaySheetMain extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.main);
+        basicDetailsFragment.setMainActivity(this);
+
     }
 
     //ActionBar and Tabs
@@ -24,22 +27,24 @@ public class PlaySheetMain extends Activity {
 
     //Fragments
     private static BasicDetailsFragment basicDetailsFragment = new BasicDetailsFragment();
+    private static StartMenuFragment startMenuFragment = new StartMenuFragment();
+
 
     @Override
     protected void onStart() {
         super.onStart();
 
         actionBar = getActionBar();
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
+        //actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
 
-        getFragmentManager().beginTransaction().add(R.id.viewSwitcher, basicDetailsFragment).commit();
+        getFragmentManager().beginTransaction().add(R.id.viewSwitcher, startMenuFragment).commit();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
 
-        getFragmentManager().beginTransaction().remove(basicDetailsFragment).commit();
+        getFragmentManager().beginTransaction().remove(startMenuFragment).commit();
 
     }
 }

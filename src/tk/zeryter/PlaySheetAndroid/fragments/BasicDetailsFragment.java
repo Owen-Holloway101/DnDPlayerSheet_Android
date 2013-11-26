@@ -1,5 +1,7 @@
-package tk.zeryter.PlaySheetAndroid;
+package tk.zeryter.PlaySheetAndroid.fragments;
 
+import android.app.ActionBar;
+import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import tk.zeryter.PlaySheetAndroid.R;
 
 /**
  * Owen Holloway
@@ -16,7 +19,6 @@ import android.widget.TextView;
 
 public class BasicDetailsFragment extends Fragment {
 
-
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
@@ -24,13 +26,18 @@ public class BasicDetailsFragment extends Fragment {
         return inflater.inflate(R.layout.basicdetails, container, false);
     }
 
-    TextView setAgePrompt;
+    //ActionBar and Tabs
+    private ActionBar actionBar;
 
-    SeekBar setAge;
+    //GUI elements
+    private TextView setAgePrompt;
+    private SeekBar setAge;
 
     public void onStart() {
 
         super.onStart();
+
+        actionBar = mainActivity.getActionBar();
 
         setAgePrompt = (TextView) getView().findViewById(R.id.agePrompt);
 
@@ -52,6 +59,13 @@ public class BasicDetailsFragment extends Fragment {
             public void onStopTrackingTouch(SeekBar seekBar) {
             }
         });
+    }
+
+    //MainActivity
+    private Activity mainActivity = null;
+
+    public void setMainActivity(Activity activity) {
+        this.mainActivity = activity;
     }
 }
 
