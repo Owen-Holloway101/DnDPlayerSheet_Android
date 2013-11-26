@@ -1,11 +1,13 @@
 package tk.zeryter.PlaySheetAndroid.fragments;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import tk.zeryter.PlaySheetAndroid.PlaySheetMain;
 import tk.zeryter.PlaySheetAndroid.R;
 
 /**
@@ -33,11 +35,22 @@ public class StartMenuFragment extends Fragment implements View.OnClickListener{
         testButton1 = (Button) getView().findViewById(R.id.testButton1);
         testButton2 = (Button) getView().findViewById(R.id.testButton2);
         testButton3 = (Button) getView().findViewById(R.id.testButton3);
+        testButton1.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View v) {
-        //To change body of implemented methods use File | Settings | File Templates.
+
+        mainActivity.getFragmentManager().beginTransaction().replace(R.id.viewSwitcher, PlaySheetMain.basicDetailsFragment).commit();
+
     }
+
+    //MainActivity
+    private Activity mainActivity = null;
+
+    public void setMainActivity(Activity activity) {
+        this.mainActivity = activity;
+    }
+
 }

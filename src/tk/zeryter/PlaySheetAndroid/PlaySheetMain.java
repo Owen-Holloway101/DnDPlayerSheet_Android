@@ -19,6 +19,7 @@ public class PlaySheetMain extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         basicDetailsFragment.setMainActivity(this);
+        startMenuFragment.setMainActivity(this);
 
     }
 
@@ -26,8 +27,8 @@ public class PlaySheetMain extends Activity {
     private ActionBar actionBar;
 
     //Fragments
-    private static BasicDetailsFragment basicDetailsFragment = new BasicDetailsFragment();
-    private static StartMenuFragment startMenuFragment = new StartMenuFragment();
+    public static BasicDetailsFragment basicDetailsFragment = new BasicDetailsFragment();
+    public static StartMenuFragment startMenuFragment = new StartMenuFragment();
 
 
     @Override
