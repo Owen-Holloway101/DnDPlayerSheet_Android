@@ -15,8 +15,7 @@ import tk.zeryter.PlaySheetAndroid.fragments.StartMenuFragment;
 public class PlaySheetMain extends Activity {
 
     //Fragments + manager
-    private FragmentManager fragmentManager = new FragmentManager(this);
-    public static BasicDetailsFragment basicDetailsFragment = new BasicDetailsFragment();
+    public FragmentManager fragmentManager = new FragmentManager(this);
     public static StartMenuFragment startMenuFragment = new StartMenuFragment();
 
     @Override
@@ -25,12 +24,10 @@ public class PlaySheetMain extends Activity {
         setContentView(R.layout.main);
 
         //this is the start activity, these fragments need to know this
-        basicDetailsFragment.setMainActivity(this);
-        startMenuFragment.setMainActivity(this);
+        startMenuFragment.setParentActivity(this);
 
         //the fragment manager needs to know what fragments it managing, as well as its container
         fragmentManager.setContainer(R.id.viewSwitcher);
-        fragmentManager.addFragment("basicDetails",basicDetailsFragment);
         fragmentManager.addFragment("startMenu",startMenuFragment);
 
     }

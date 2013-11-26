@@ -2,13 +2,14 @@ package tk.zeryter.PlaySheetAndroid.fragments;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import tk.zeryter.PlaySheetAndroid.PlaySheetMain;
 import tk.zeryter.PlaySheetAndroid.R;
+import tk.zeryter.PlaySheetAndroid.activities.SetupActivity;
 
 /**
  * Owen Holloway
@@ -26,14 +27,14 @@ public class StartMenuFragment extends Fragment implements View.OnClickListener{
     }
 
     //GUI elements
-    Button newCharButton, testButton2, testButton3;
+    Button newCharButton, openCharButton, testButton3;
 
     @Override
     public void onStart() {
         super.onStart();
 
         newCharButton = (Button) getView().findViewById(R.id.newCharButton);
-        testButton2 = (Button) getView().findViewById(R.id.testButton2);
+        openCharButton = (Button) getView().findViewById(R.id.openCharButton);
         testButton3 = (Button) getView().findViewById(R.id.testButton3);
         newCharButton.setOnClickListener(this);
 
@@ -42,15 +43,16 @@ public class StartMenuFragment extends Fragment implements View.OnClickListener{
     @Override
     public void onClick(View v) {
 
-        mainActivity.getFragmentManager().beginTransaction().replace(R.id.viewSwitcher, PlaySheetMain.basicDetailsFragment).commit();
+        Intent intent = new Intent(parentActivity, SetupActivity.class);
+        parentActivity.startActivity(intent);
 
     }
 
     //MainActivity
-    private Activity mainActivity = null;
+    private Activity parentActivity = null;
 
-    public void setMainActivity(Activity activity) {
-        this.mainActivity = activity;
+    public void setParentActivity(Activity activity) {
+        this.parentActivity = activity;
     }
 
 }

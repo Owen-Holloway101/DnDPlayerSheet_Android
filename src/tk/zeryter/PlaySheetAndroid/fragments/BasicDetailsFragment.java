@@ -5,12 +5,10 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.Toast;
 import tk.zeryter.PlaySheetAndroid.R;
 
 /**
@@ -28,9 +26,6 @@ public class BasicDetailsFragment extends Fragment {
         return inflater.inflate(R.layout.basicdetails, container, false);
     }
 
-    //ActionBar and Tabs
-    private ActionBar actionBar;
-
     //GUI elements
     private TextView setAgePrompt;
     private SeekBar setAge;
@@ -38,9 +33,6 @@ public class BasicDetailsFragment extends Fragment {
     public void onStart() {
 
         super.onStart();
-
-        actionBar = mainActivity.getActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
 
         setAgePrompt = (TextView) getView().findViewById(R.id.agePrompt);
 
@@ -65,10 +57,10 @@ public class BasicDetailsFragment extends Fragment {
     }
 
     //MainActivity
-    private Activity mainActivity = null;
+    private Activity parentActivity = null;
 
-    public void setMainActivity(Activity activity) {
-        this.mainActivity = activity;
+    public void setParentActivity(Activity activity) {
+        this.parentActivity = activity;
     }
 }
 

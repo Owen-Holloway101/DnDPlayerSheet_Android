@@ -31,10 +31,11 @@
             android:text="Street"
             android:layout_gravity="right">
         <Button
-                android:id="@+id/testButton2"
+                android:id="@+id/openCharButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="testButton2"/>
+                android:text="@string/openCharButton"
+                android:drawableTop="@drawable/custom_open"/>
     </RelativeLayout>
 
 </LinearLayout>
