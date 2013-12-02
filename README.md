@@ -5,8 +5,8 @@ Hello, this is a very early stage in development!
 Time for an update in this readme.
 
 TODO:
-- [X] get basic theming and android framework down
-- [ ] add character creation, race and class pick etc ...
+- [DONE] get basic theming and android framework down
+- [DEV] add character creation, race and class pick etc ...
 - [ ] setup file saving for characters
 - [ ] get zip file format ready for resource packs
 
