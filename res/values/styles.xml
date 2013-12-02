@@ -6,7 +6,7 @@
     <color name="statusBar">#6AD421</color>
 
     <!---->
-    <style name="Theme.ZeryTheme" parent="@android:style/Theme.Holo" >
+    <style name="Theme.ZeryTheme" parent="zerytheme" >
         <item name="android:windowBackground">@color/backgroundGrey</item>
         <item name="android:actionBarStyle">@style/MyActionBar</item>
     </style>

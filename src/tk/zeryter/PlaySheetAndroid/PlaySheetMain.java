@@ -3,7 +3,6 @@ package tk.zeryter.PlaySheetAndroid;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
-import tk.zeryter.PlaySheetAndroid.fragments.BasicDetailsFragment;
 import tk.zeryter.PlaySheetAndroid.fragments.StartMenuFragment;
 
 /**

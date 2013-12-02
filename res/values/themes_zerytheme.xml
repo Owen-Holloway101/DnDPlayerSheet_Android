@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="zerytheme" parent="android:Theme.Black">
+
+    <item name="android:editTextStyle">@style/EditTextzerytheme</item>
+
+    <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewzerytheme</item>
+
+    <item name="android:checkboxStyle">@style/CheckBoxzerytheme</item>
+
+    <item name="android:radioButtonStyle">@style/RadioButtonzerytheme</item>
+
+    <item name="android:buttonStyle">@style/Buttonzerytheme</item>
+
+    <item name="android:imageButtonStyle">@style/ImageButtonzerytheme</item>
+
+    <item name="android:spinnerStyle">@style/Spinnerzerytheme</item>
+
+    <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItemzerytheme</item>
+
+    <item name="android:tabWidgetStyle">@style/TabWidgetzerytheme</item>
+
+    <item name="android:progressBarStyleHorizontal">@style/ProgressBarzerytheme</item>
+
+    <item name="android:seekBarStyle">@style/SeekBarzerytheme</item>
+
+    <item name="android:ratingBarStyle">@style/RatingBarzerytheme</item>
+
+    <item name="android:ratingBarStyleIndicator">@style/RatingBarBigzerytheme</item>
+
+    <item name="android:ratingBarStyleSmall">@style/RatingBarSmallzerytheme</item>
+
+    <item name="android:buttonStyleToggle">@style/Togglezerytheme</item>
+
+    <item name="android:listViewStyle">@style/ListViewzerytheme</item>
+
+    <item name="android:listViewWhiteStyle">@style/ListViewzerytheme.White</item>
+
+    <item name="android:spinnerItemStyle">@style/SpinnerItemzerytheme</item>
+
+  </style>
+
+</resources>
