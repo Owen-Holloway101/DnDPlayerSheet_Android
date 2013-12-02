@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!--http://android-holo-colors.com/ awesome site!-->
+
     <!--Colours, custom colours!-->
     <color name="backgroundGrey">#2E3436</color>
     <color name="statusBar">#6AD421</color>
